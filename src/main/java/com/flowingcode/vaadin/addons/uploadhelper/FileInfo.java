@@ -82,6 +82,7 @@ public final class FileInfo implements Serializable {
                if ($1) d.files = [... d.files, $0]; else return;
             } else {
               if (d.files.some((e,j)=>e.name==$0.name && j>i)) d.files=d.files.filter((e,j)=>e.name!=$0.name || j<=i);
+              delete $0.name;
               d.files[i] = Object.assign(d.files[i], $0);
             }
             d.files = Array.from(d.files);
