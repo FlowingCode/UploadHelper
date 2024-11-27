@@ -85,9 +85,9 @@ public class FileInfoDemo extends Div {
           }
 
           if (Math.random() < 0.5) {
-            ui.access(() -> new FileInfo(ev).complete().update());
+            ui.access(() -> new FileInfo(ev).complete().status("").update());
           } else {
-            ui.access(() -> new FileInfo(ev).errorMessage("Random failure").update());
+            ui.access(() -> new FileInfo(ev).errorMessage("Random failure").status("").update());
           }
 
           processing.remove(ev.getFileName());
