@@ -34,6 +34,7 @@ public class UploadHelperDemoView extends TabbedDemo {
   public UploadHelperDemoView() {
     addDemo(PlaygroundDemo.class);
     addDemo(FileInfoDemo.class);
+    addDemo(ValidatingDemo.class);
     setSizeFull();
   }
 }
