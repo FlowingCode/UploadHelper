@@ -33,10 +33,19 @@ import com.vaadin.flow.router.Route;
 public class ValidatingDemo extends Div {
 
   public ValidatingDemo() {
-    Upload upload = new Upload(new ValidatingMultiFileMemoryBuffer());
-    // upload.setAcceptedFileTypes("application/pdf");
-    // ((ValidatingReceiver) upload.getReceiver()).setAcceptedMimeTypes(upload);
+    Upload upload = new ValidatingUpload(new ValidatingMultiFileBuffer());
+
+    // show-source upload.setAcceptedFileTypes("application/pdf");
+
+    // #if vaadin eq 0
     ((ValidatingReceiver) upload.getReceiver()).setAcceptedMimeTypes("application/pdf");
+    // #endif
+
+
+    upload.addFileRejectedListener(ev -> {
+      System.out.println("REJECTED ");
+    });
+
     ((ValidatingReceiver) upload.getReceiver()).setRejectionListener(file -> {
       UI.getCurrent().access(() -> {
         new FileInfo(upload, file.getFileName()).errorMessage(file.getMimeType() + " rejected")
