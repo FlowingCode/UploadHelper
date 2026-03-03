@@ -2,7 +2,7 @@
  * #%L
  * Upload Helper Add-on
  * %%
- * Copyright (C) 2022 - 2024 Flowing Code
+ * Copyright (C) 2022 - 2026 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ package com.flowingcode.vaadin.addons.uploadhelper;
 import com.flowingcode.vaadin.addons.DemoLayout;
 import com.flowingcode.vaadin.addons.GithubLink;
 import com.flowingcode.vaadin.addons.demo.TabbedDemo;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.ParentLayout;
 import com.vaadin.flow.router.Route;
 
@@ -29,6 +30,7 @@ import com.vaadin.flow.router.Route;
 @ParentLayout(DemoLayout.class)
 @Route("upload-helper")
 @GithubLink("https://github.com/FlowingCode/UploadHelper")
+@CssImport("./styles/upload-helper-demo-styles.css")
 public class UploadHelperDemoView extends TabbedDemo {
 
   public UploadHelperDemoView() {
