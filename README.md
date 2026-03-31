@@ -12,6 +12,10 @@ Flow API for `vaadin-upload-file`
 
 * Provide an API for manipulating the [vaadin-upload-file](https://cdn.vaadin.com/vaadin-web-components/24.5.0/#/elements/vaadin-upload-file) element.
 
+## Supported versions
+
+Supported versions: Vaadin 24 (add-on version 1.x)
+
 ## Online demo
 
 [Online demo here](http://addonsv24.flowingcode.com/upload-helper)
